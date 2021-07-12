@@ -1,4 +1,5 @@
 const searchBtn = document.getElementById('search-btn');
+const searchControl = document.getElementById('search-input');
 const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
@@ -6,6 +7,7 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 //event listeners
 
 searchBtn.addEventListener('click', getMealList);
+searchControl.addEventListener('keypress', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
