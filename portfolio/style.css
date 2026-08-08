@@ -103,7 +103,7 @@ html{
 .home{
     display:flex;
     background:
-        linear-gradient(110deg, rgba(7, 12, 24, 0.74) 0%, rgba(7, 12, 24, 0.62) 42%, rgba(7, 12, 24, 0.5) 100%),
+        linear-gradient(110deg, rgba(7, 12, 24, 0.80) 0%, rgba(7, 12, 24, 0.68) 42%, rgba(7, 12, 24, 0.56) 100%),
         url("https://images.pexels.com/photos/4486718/pexels-photo-4486718.jpeg") no-repeat center right;
     background-size: cover;
     height: 100vh;
@@ -705,7 +705,7 @@ footer span a:hover{
         z-index: 999;
     }
     .menu-btn i.active:before{
-        content: "00d";
+        content: "\f00d";
     }
    .navbar .menu{
         position: fixed;
@@ -773,10 +773,10 @@ footer span a:hover{
         background-position: center;
     }
      .home .home-content .text2{
-        font-size: 60px;
+        font-size: 56px;
     }
     .home .home-content .text3{
-        font-size: 32px;
+        font-size: 30px;
     }
     .home .home-content a{
         font-size: 20px;
@@ -791,9 +791,9 @@ footer span a:hover{
 
 @media (max-width: 500px){
      .home .home-content .text2{
-        font-size: 50px;
+        font-size: 46px;
     }
     .home .home-content .text3{
-        font-size: 27px;
+        font-size: 24px;
     }
 }
