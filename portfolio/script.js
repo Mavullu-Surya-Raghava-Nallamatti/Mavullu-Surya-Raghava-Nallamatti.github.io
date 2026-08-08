@@ -32,6 +32,22 @@ $(document).ready(function(){
         $('.menu-btn i').removeClass("active");
     });
 
+    function toggleSkillsAnimation(){
+        var skillsSection = $('.skills');
+        if (!skillsSection.length) {
+            return;
+        }
+
+        var rect = skillsSection[0].getBoundingClientRect();
+        var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        var isInView = rect.top <= viewportHeight * 0.75 && rect.bottom >= viewportHeight * 0.25;
+
+        skillsSection.toggleClass('animate', isInView);
+    }
+
+    $(window).on('scroll resize', toggleSkillsAnimation);
+    toggleSkillsAnimation();
+
     //typing animation script
     var typed = new Typed(".typing", {
         strings: ["reliable cloud platforms", "Kubernetes ecosystems", "AI-enabled infrastructure"],
