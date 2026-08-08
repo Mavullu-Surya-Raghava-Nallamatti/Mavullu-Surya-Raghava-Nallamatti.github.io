@@ -16,6 +16,7 @@ $(document).ready(function(){
     // slide-up script
     $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
+        $('html').css("scrollBehavior", "auto");
     });
 
 
@@ -25,16 +26,22 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     });
 
+    $('.navbar .menu li a').click(function(){
+        $('html').css("scrollBehavior", "smooth");
+        $('.navbar .menu').removeClass("active");
+        $('.menu-btn i').removeClass("active");
+    });
+
     //typing animation script
     var typed = new Typed(".typing", {
-        strings: ["Web Developer", "Network Engineer", "Youtuber"],
+        strings: ["reliable cloud platforms", "Kubernetes ecosystems", "AI-enabled infrastructure"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     })
 
-    var typed = new Typed(".typing-2", {
-        strings: ["Web Developer", "Network Engineer", "Youtuber"],
+    var typed2 = new Typed(".typing-2", {
+        strings: ["Cloud Infrastructure Engineer", "Site Reliability Engineer", "Kubernetes Platform Engineer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
