@@ -143,6 +143,23 @@ html{
     background: none;
 }
 
+.home .home-content .cta-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.home .home-content a.secondary{
+    background: transparent;
+    border-color: #fff;
+}
+
+.home .home-content a.secondary:hover{
+    background: #fff;
+    color: #111;
+}
+
 /* All similar content styling code*/
 section {
     padding: 100px 0;
@@ -192,7 +209,7 @@ section .title::after{
 
 /* about section styling */
 .about .title::after{
-    content: "who I am ";
+    content: "who I am";
 }
 
 
@@ -247,7 +264,7 @@ section .title::after{
 }
 .services .title::after{
     background: #111;
-    content: "what i provide"
+    content: "what I do";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
@@ -281,6 +298,54 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
+.services .serv-content .card .project-link{
+    display: inline-block;
+    margin-top: 14px;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.services .serv-content .card .project-link:hover{
+    border-bottom-color: #fff;
+}
+
+/* experience section */
+.experience .title::after{
+    content: "career";
+}
+
+.experience .exp-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.experience .exp-item{
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+}
+
+.experience .exp-item h3{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.experience .exp-item .meta{
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.experience .exp-item ul{
+    padding-left: 18px;
+}
+
+.experience .exp-item li{
+    margin-bottom: 8px;
+}
 
 
 
@@ -293,7 +358,7 @@ section .title::after{
 /*skills section styling*/
 
 .skills .title::after{
-    content: "what I know";
+    content: "stack and strengths";
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
@@ -350,28 +415,28 @@ section .title::after{
     top: 0;
     background: crimson;
 }
-.skills-content .right .html::before{
+.skills-content .right .kubernetes::before{
+    width: 95%;
+}
+.skills-content .right .cloud::before{
     width: 90%;
 }
-.skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .js::before{
-    width: 75%;
-}
-.skills-content .right .mysql::before{
-    width: 70%;
+.skills-content .right .cicd::before{
+    width: 90%;
 }
 .skills-content .right .python::before{
-    width: 60%;
+    width: 88%;
 }
-.skills-content .right .c::before{
-    width: 70%;
+.skills-content .right .terraform::before{
+    width: 86%;
+}
+.skills-content .right .observability::before{
+    width: 85%;
 }
 
 /* contact section styling
 .contact .title::after{
-    content: "get in touch";
+    content: "let us connect";
 }
 .contact .contact-content .column-left , .column-left{
     width: calc(50% - 30px);
@@ -574,6 +639,11 @@ footer span a:hover{
     text-decoration: underline;
 }
 
+.projects .title::after{
+    content: "hands-on work";
+    background: #111;
+}
+
 
 /*footer section styling */
 footer{
@@ -588,7 +658,6 @@ footer span a{
 footer span a:hover{
     text-decoration: underline;
 }
-
 
 
 
