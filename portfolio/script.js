@@ -63,9 +63,7 @@ $(document).ready(function(){
         loop: true
     })
 
-    $('#contact-form').on('submit', function(event) {
-        event.preventDefault();
-
+    function openContactComposer() {
         var name = $('#contact-name').val().trim();
         var email = $('#contact-email').val().trim();
         var subject = $('#contact-subject').val().trim();
@@ -77,27 +75,16 @@ $(document).ready(function(){
         }
 
         var body = 'Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message;
-        var mailtoUrl = buildMailtoLink('surya.nallamatti@gmail.com', subject, body);
         var gmailUrl = buildGmailComposeUrl('surya.nallamatti@gmail.com', subject, body);
+        window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    }
 
-        var fallbackLink = document.createElement('a');
-        fallbackLink.href = gmailUrl;
-        fallbackLink.target = '_blank';
-        fallbackLink.rel = 'noopener noreferrer';
-        fallbackLink.style.display = 'none';
-        document.body.appendChild(fallbackLink);
-        fallbackLink.click();
-        document.body.removeChild(fallbackLink);
+    $('#contact-form').on('submit', function(event) {
+        event.preventDefault();
+        openContactComposer();
+    });
 
-        var mailtoLink = document.createElement('a');
-        mailtoLink.href = mailtoUrl;
-        mailtoLink.style.display = 'none';
-        document.body.appendChild(mailtoLink);
-        mailtoLink.click();
-        document.body.removeChild(mailtoLink);
-
-        setTimeout(function() {
-            window.location.href = mailtoUrl;
-        }, 300);
+    $('#open-gmail-btn').on('click', function() {
+        openContactComposer();
     });
 });
