@@ -420,23 +420,25 @@ section .title::after{
     left: 0;
     top: 0;
     background: crimson;
+    width: 0;
+    transition: width 1s ease;
 }
-.skills-content .right .kubernetes::before{
+.skills.animate .skills-content .right .kubernetes::before{
     width: 95%;
 }
-.skills-content .right .cloud::before{
+.skills.animate .skills-content .right .cloud::before{
     width: 90%;
 }
-.skills-content .right .cicd::before{
+.skills.animate .skills-content .right .cicd::before{
     width: 90%;
 }
-.skills-content .right .python::before{
+.skills.animate .skills-content .right .python::before{
     width: 88%;
 }
-.skills-content .right .terraform::before{
+.skills.animate .skills-content .right .terraform::before{
     width: 86%;
 }
-.skills-content .right .observability::before{
+.skills.animate .skills-content .right .observability::before{
     width: 85%;
 }
 
