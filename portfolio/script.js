@@ -62,4 +62,42 @@ $(document).ready(function(){
         backSpeed: 60,
         loop: true
     })
+
+    $('#contact-form').on('submit', function(event) {
+        event.preventDefault();
+
+        var name = $('#contact-name').val().trim();
+        var email = $('#contact-email').val().trim();
+        var subject = $('#contact-subject').val().trim();
+        var message = $('#contact-message').val().trim();
+
+        if (!name || !email || !subject || !message) {
+            alert('Please fill in all contact fields before sending your message.');
+            return;
+        }
+
+        var body = 'Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message;
+        var mailtoUrl = buildMailtoLink('surya.nallamatti@gmail.com', subject, body);
+        var gmailUrl = buildGmailComposeUrl('surya.nallamatti@gmail.com', subject, body);
+
+        var fallbackLink = document.createElement('a');
+        fallbackLink.href = gmailUrl;
+        fallbackLink.target = '_blank';
+        fallbackLink.rel = 'noopener noreferrer';
+        fallbackLink.style.display = 'none';
+        document.body.appendChild(fallbackLink);
+        fallbackLink.click();
+        document.body.removeChild(fallbackLink);
+
+        var mailtoLink = document.createElement('a');
+        mailtoLink.href = mailtoUrl;
+        mailtoLink.style.display = 'none';
+        document.body.appendChild(mailtoLink);
+        mailtoLink.click();
+        document.body.removeChild(mailtoLink);
+
+        setTimeout(function() {
+            window.location.href = mailtoUrl;
+        }, 300);
+    });
 });

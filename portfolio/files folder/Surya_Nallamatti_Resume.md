@@ -1,6 +1,6 @@
 # Surya Nallamatti
 
-Toronto, ON | 902-452-1614 | surya.nallamatti@rbc.com | [LinkedIn](https://www.linkedin.com/in/mavullusuryaraghava-nallamatti/)
+Toronto, ON | 902-452-1614 | surya.nallamatti@gmail.com | [LinkedIn](https://www.linkedin.com/in/mavullusuryaraghava-nallamatti/)
 
 ## Professional Summary
 
