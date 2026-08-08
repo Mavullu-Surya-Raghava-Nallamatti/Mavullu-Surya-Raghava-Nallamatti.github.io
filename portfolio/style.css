@@ -102,7 +102,10 @@ html{
 
 .home{
     display:flex;
-    background: url("images/123.png") no-repeat center;
+    background:
+        linear-gradient(110deg, rgba(7, 12, 24, 0.74) 0%, rgba(7, 12, 24, 0.62) 42%, rgba(7, 12, 24, 0.5) 100%),
+        url("https://images.pexels.com/photos/4486718/pexels-photo-4486718.jpeg") no-repeat center right;
+    background-size: cover;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -114,15 +117,18 @@ html{
 
 .home .home-content .text1{
     font-size: 27px;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.45);
 }
 .home .home-content .text2{
     font-size: 75px;
     font-weight: 600px;
     margin-left: -3px;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.48);
 }
 .home .home-content .text3{
     font-size: 40px;
     margin: 5px 0;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.45);
 }
 .home .home-content .text3 span{
     color: crimson;
@@ -699,7 +705,7 @@ footer span a:hover{
         z-index: 999;
     }
     .menu-btn i.active:before{
-        content: "\f00d";
+        content: "00d";
     }
    .navbar .menu{
         position: fixed;
@@ -762,6 +768,9 @@ footer span a:hover{
 @media (max-width: 690px){
     .max-width{
         padding: 0 23px;
+    }
+    .home{
+        background-position: center;
     }
      .home .home-content .text2{
         font-size: 60px;
